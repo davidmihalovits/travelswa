@@ -1,0 +1,126 @@
+@import './variables.sass'
+
+.requestFormContainer
+    margin: 20px 20px 100px 20px
+
+    .requestForm
+        .requestFormProgressIconContainer
+            display: grid
+            grid-template-columns: auto 1fr
+            align-items: center
+            gap: 10px
+            margin-bottom: 10px
+            
+            .requestFormProgress
+                width: 100%
+                height: 13px
+                background-color: $smoke-gray
+                border-radius: 10px
+
+                .requestFormProgressBar
+                    height: 13px
+                    background: repeating-linear-gradient(45deg, $primary-color,$primary-color 10px,#125bc9 10px,#125bc9 20px)
+                    border-radius: 10px
+                    transition: 1s
+
+        .requestFormTitle
+            font-size: 24px
+            color: $smoke-black
+            font-weight: 700
+
+        .requestFormLabel
+            display: block
+            font-size: 12px
+            margin: 15px 0 0 0
+            color: $smoke-black
+
+        .requestFormInput
+            width: 100%
+            font-size: 16px
+            padding: 10px
+            outline: none
+            border: 1px solid $smoke-black
+            border-radius: 4px
+            background-color: white
+            color: $smoke-black
+            margin-top: 5px
+
+            &:focus
+                border: 1px solid $primary-color
+                color: $primary-color
+
+        .requestFormError
+            font-size: 12px
+            color: $rejected
+
+        .requestFormRadioText
+            display: grid
+            grid-template-columns: auto 1fr
+            align-items: center
+            margin-top: 5px
+
+            .requestFormRadio
+                width: 25px
+                height: 25px
+                border-radius: 4px
+                border: 1px solid $smoke-black
+                cursor: pointer
+                position: relative
+                margin-right: 5px
+
+                .requestFormRadioCheckmark
+                    left: 8px
+                    top: 4px
+                    width: 7px
+                    height: 13px
+                    border: solid $primary-color
+                    border-width: 0 3px 3px 0
+                    transform: rotate(45deg)
+                    position: absolute
+                    cursor: pointer
+
+            .requestFormText
+                font-size: 16px
+                color: $smoke-black
+
+        .requestFormVerbage
+            font-size: 14px
+            margin: 20px 0 0 20px
+            line-height: 22px
+            color: $smoke-black
+
+            .requestFormVerbageItem
+                margin-top: 8px
+
+        .requestFormButton
+            width: 100%
+            height: 54px
+            margin-top: 40px
+            outline: none
+            border: none
+            border-radius: 50px
+            color: white
+            background-color: $primary-color
+            font-size: 20px
+            cursor: pointer
+
+            &:disabled
+                background: $smoke-gray
+                cursor: not-allowed
+
+        .requestFormButtonBack
+            width: 100%
+            height: 54px
+            margin-top: 10px
+            outline: none
+            border: 1px solid $smoke-black
+            border-radius: 50px
+            color: $smoke-black
+            background-color: white
+            font-size: 20px
+            cursor: pointer
+
+@media only screen and (min-width: 1100px)
+    .requestFormContainer
+        margin: 120px auto
+        width: 350px

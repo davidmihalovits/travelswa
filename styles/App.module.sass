@@ -1,0 +1,15 @@
+@keyframes spin
+    0%
+        transform: rotate(0deg)
+        
+    100%
+        transform: rotate(360deg)
+    
+.appLoading
+    height: 100vh
+    display: grid
+    align-items: center
+    justify-content: center
+
+    .appLoadingSpinner
+        animation: 1.5s linear infinite spin

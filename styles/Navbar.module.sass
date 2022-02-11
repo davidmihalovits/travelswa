@@ -1,0 +1,92 @@
+@import './variables.sass'
+
+.navbarContainer
+    background: rgba(#fff,.50)
+    backdrop-filter: blur(5px) 
+    border-top: 1px solid $smoke-gray
+    padding: 6px 0
+    position: fixed
+    bottom: 0
+    left: 0
+    width: 100%
+    z-index: 10
+
+    .navbar
+        .navbarDesktop
+            display: none
+            
+        .navbarMobile
+            display: grid
+            grid-template-columns: repeat(auto-fit, minmax(0, 1fr)) 
+            position: relative
+
+            .navbarMobileButton
+                cursor: pointer
+                outline: none
+                border: none
+                background: none
+                
+                .navbarMobileButtonText
+                    font-size: 11px
+                    color: $smoke-black
+
+@media only screen and (min-width: 1100px)
+    .navbarContainer
+        background: rgba(#fff,.50)
+        backdrop-filter: blur(5px) 
+        border-top: none
+        border-bottom: 1px solid $smoke-gray
+        padding: 8px 0
+        position: fixed
+        top: 0
+        left: 0
+        bottom: auto
+        width: 100%
+        z-index: 10
+
+        .navbar
+            .navbarMobile
+                display: none
+
+            .navbarDesktop
+                width: 1100px
+                margin: 0 auto
+                display: grid
+                grid-template-columns: 1fr 1fr
+
+                .navbarDesktopLeft
+                    display: grid
+                    grid-template-columns: repeat(auto-fit, minmax(0, auto))
+                    align-items: center
+                    justify-content: start
+                    gap: 30px
+
+                    .navbarDesktopLeftButton
+                        outline: none
+                        border: none
+                        background: none
+                        cursor: pointer
+
+                        .navbarDesktopLeftButtonText
+                            font-size: 16px
+                            color: $smoke-black
+
+                .navbarDesktopRightButton
+                    background: $primary-color
+                    border: 1px solid $primary-color
+                    outline: none
+                    border-radius: 4px
+                    height: 58px
+                    width: 178px
+                    cursor: pointer
+                    justify-self: end
+                    display: grid
+                    grid-template-columns: auto auto
+                    align-items: center
+                    justify-content: center
+                    gap: 8px
+
+                    .navbarDesktopRightButtonText
+                        font-size: 22px
+                        color: white
+                    
